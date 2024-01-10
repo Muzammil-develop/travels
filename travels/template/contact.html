@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block tittle %}
+
+Tickets
+
+{% endblock tittle %}
+
+
+{% block body %}
+
+<main>
+  <div class="ticket">
+    <img src="/static/tickets.png" alt="">
+  </div>
+  <h1> Book Your Tickets Here </h1>
+
+  
+  <div class="form">
+    <form method="post" action="/contact">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+      <input type="name" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone">
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input type="age" class="form-control" id="age" name="age" placeholder="Enter Your Age">
+    </div>
+    <div class="mb-3">
+      <label for="birth" class="form-label"> Date Of Birth</label>
+      <input type="birth" class="form-control" id="birth" name="birth" placeholder="Enter Your Date Of Birth">
+    </div>
+    <div class="mb-3">
+      <label for="location" class="form-label"> Current Location</label>
+      <input type="location" class="form-control" id="location" name="location" placeholder="Enter Your Current Location">
+    </div>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Open This To Select Ticket Type</option>
+      <option value="1">First Class</option>
+      <option value="2">Economy Class</option>
+      <option value="3">Bussiness Class</option>
+    </select>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Open This To Select Ticket Quantity</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+      <option value="5">Five</option>
+      <option value="6">Six</option>
+      <option value="7">Seven</option>
+      <option value="8">Eight</option>
+      <option value="9">Nine</option>
+      <option value="10">Ten</option>
+    </select>
+  </div>
+  <button class="btn-sub" type="btn-primary">Submit</button>
+</form>
+  
+  
+  
+</main>
+
+{% endblock body %}
